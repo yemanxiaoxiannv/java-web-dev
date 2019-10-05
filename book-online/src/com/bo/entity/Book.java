@@ -1,24 +1,34 @@
-package com.web;
+package com.bo.entity;
 
 /**
- * @author xx-cai
+ * @author mq_xu
  * @ClassName Book
- * @Description TODO
- * @Date 2019/9/27
+ * @Description 图书实体类
+ * @Date 2019/9/23
  * @Version 1.0
  **/
 public class Book {
+    private Integer id;
     private String name;
     private String cover;
     private String author;
 
-    public Book(String name, String cover, String author) {
+    public Book(Integer id, String name, String cover, String author) {
+        this.id = id;
         this.name = name;
         this.cover = cover;
         this.author = author;
     }
 
     public Book() {
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -45,13 +55,13 @@ public class Book {
         this.author = author;
     }
 
+
     @Override
     public String toString() {
         return "Book{" +
-                "name='" + name + '\'' +
+                "id=" + id +
+                ", name='" + name + '\'' +
                 ", cover='" + cover + '\'' +
-                ", author='" + author + '\'' +
                 '}';
     }
 }
-
