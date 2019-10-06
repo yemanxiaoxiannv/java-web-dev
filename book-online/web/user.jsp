@@ -1,4 +1,4 @@
-<%@ page import="com.bo.entity.User" %>
+        <%@ page import="com.bo.entity.User" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -139,6 +139,10 @@
     <div class="row">
         <%--左边部分--%>
         <div class="col-8">
+            <div class="info">
+                <img src="images/${user.avatar}" alt="" class="profile">
+                <h2>${user.nickname}</h2>
+            </div>
             <br>
             <div class="item">
                 <ul class="nav">
@@ -175,15 +179,17 @@
         <div class="col-4">
             <div class="info-box">
                 <div class="top">
-                    <img src="images/${user.avatar}" alt="">
                     <div>
                         <p>籍贯：${user.address}</p>
                         <p>账号：${user.account}</p>
                         <p>${user.joinDate}加入</p>
+                        <p>泡泡圈：9</p>
+                        <p>关注：0</p>
+                        <p>获赞：4</p>
+                        <p>粉丝：1000</p>
                     </div>
                 </div>
                 <br>
-                <p>${user.nickname}</p>
             </div>
             <br>
             <div class="item">
